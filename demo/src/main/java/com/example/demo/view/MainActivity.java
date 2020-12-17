@@ -9,12 +9,13 @@ import com.example.demo.base.BaseActivity;
 import com.example.demo.base.BasePresenter;
 import com.example.demo.bean.NewListBean;
 import com.example.demo.interfaces.MainContract;
+import com.example.demo.presenter.MainPresenterImpl;
 
-public class MainActivity extends BaseActivity implements MainContract.IMainView {
+public class MainActivity extends BaseActivity<MainPresenterImpl> implements MainContract.IMainView {
 
     @Override
     protected void initData() {
-
+        presenter.getData();
     }
 
     @Override
@@ -23,8 +24,8 @@ public class MainActivity extends BaseActivity implements MainContract.IMainView
     }
 
     @Override
-    protected BasePresenter createPresenter() {
-        return null;
+    protected MainPresenterImpl createPresenter() {
+        return new MainPresenterImpl();
     }
 
     @Override
@@ -34,6 +35,8 @@ public class MainActivity extends BaseActivity implements MainContract.IMainView
 
     @Override
     public void getDataReturn(NewListBean newListBean) {
+        if(){
 
+        }
     }
 }
