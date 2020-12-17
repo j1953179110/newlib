@@ -1,8 +1,10 @@
-package com.example.a1217test;
+package com.example.a1217test.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.a1217test.R;
 
 public class MainActivity extends AppCompatActivity {
 
