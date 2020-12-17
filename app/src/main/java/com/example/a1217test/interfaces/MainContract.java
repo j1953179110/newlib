@@ -9,7 +9,7 @@ public class MainContract {
     }
 
     public interface IMainPresenter {
-        void getData();
+        void getData(String user,String pwd);
     }
 
     public interface IMainModel {
