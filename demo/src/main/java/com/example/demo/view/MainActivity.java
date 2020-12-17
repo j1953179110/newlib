@@ -3,6 +3,7 @@ package com.example.demo.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.demo.R;
 import com.example.demo.base.BaseActivity;
@@ -35,7 +36,10 @@ public class MainActivity extends BaseActivity<MainPresenterImpl> implements Mai
 
     @Override
     public void getDataReturn(NewListBean newListBean) {
-        if(){
+        if(newListBean != null){
+            Log.d("TAG","请求成功");
+        }else{
+            Log.d("TAG","请求失败");
 
         }
     }

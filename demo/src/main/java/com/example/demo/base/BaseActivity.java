@@ -16,6 +16,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
         if (presenter == null) {
             presenter = createPresenter();
+            presenter.AttchView(this);
         }
 
         initView();

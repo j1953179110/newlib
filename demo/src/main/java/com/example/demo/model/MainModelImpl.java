@@ -6,8 +6,14 @@ import com.example.demo.utils.RetrofitUtils;
 
 public class MainModelImpl implements MainContract.IMainModel {
 
+//    private MainContract.IMainPresenter presenter;
+//
+//    public MainModelImpl(MainContract.IMainPresenter presenter) {
+//        this.presenter = presenter;
+//    }
+
     @Override
     public <T> void getData(String url, ICallBack<T> iCallBack) {
-        RetrofitUtils.instance.get(url, iCallBack);
+        RetrofitUtils.getInstance().get(url, iCallBack);
     }
 }

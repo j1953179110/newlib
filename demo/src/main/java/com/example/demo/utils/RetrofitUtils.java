@@ -21,7 +21,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 public class RetrofitUtils implements INetWorkInterface {
 
-    public static RetrofitUtils instance;
+    private static RetrofitUtils instance;
 
     public static RetrofitUtils getInstance() {
         if (instance == null) {
@@ -41,7 +41,6 @@ public class RetrofitUtils implements INetWorkInterface {
                 .baseUrl(URLContract.BASEURL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-
 
         apiService = retrofit.create(ApiService.class);
     }
