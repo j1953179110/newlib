@@ -16,7 +16,7 @@ import com.example.a1217test.bean.NewListBean;
 import com.example.a1217test.interfaces.MainContract;
 import com.example.a1217test.presenter.MainPresenterIMpl;
 
-public class MainActivity extends BaseActivity implements MainContract.IMainView {
+public class MainActivity extends BaseActivity<MainPresenterIMpl> implements MainContract.IMainView {
 
     private android.widget.EditText etUser;
     private android.widget.EditText etPwd;
@@ -36,15 +36,15 @@ public class MainActivity extends BaseActivity implements MainContract.IMainView
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(etUser.getText().toString()) && TextUtils.isEmpty(etPwd.getText().toString())) {
-                    presenter.getData(etUser.getText().toString(),etPwd.getText().toString());
+                if (!TextUtils.isEmpty(etUser.getText().toString()) && !TextUtils.isEmpty(etPwd.getText().toString())) {
+                    presenter.getData(etUser.getText().toString(), etPwd.getText().toString());
                 }
             }
         });
     }
 
     @Override
-    protected BasePresenter createPresenter() {
+    protected MainPresenterIMpl createPresenter() {
         return new MainPresenterIMpl(this);
     }
 
