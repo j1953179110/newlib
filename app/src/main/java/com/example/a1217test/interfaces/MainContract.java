@@ -1,9 +1,10 @@
 package com.example.a1217test.interfaces;
 
+import com.example.a1217test.base.BaseView;
 import com.example.a1217test.bean.NewListBean;
 
 public class MainContract {
-    public interface IMainView {
+    public interface IMainView extends BaseView {
         void getDataReturn(NewListBean news);
     }
 
